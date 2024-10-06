@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="static/result.css">
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>Predicted Winner: <span id="winnerText">{{ predicted_winner }}</span></p>
+    <div id="winnerImage"></div>
+    <a href="/">Go back</a>
+
+    <script>
+        window.onload = function() {
+            const predicted_winner = document.getElementById('winnerText').textContent;
+            const winnerImageContainer = document.getElementById('winnerImage');
+
+            if (predicted_winner === 'black') {
+                const blackImage = document.createElement('img');
+                blackImage.src = 'static/black-king.jpg'; // Path to your black chess piece image
+                blackImage.alt = 'Black Chess Piece';
+                winnerImageContainer.appendChild(blackImage);
+
+                const winnerText = document.createElement('p');
+                winnerText.textContent = 'Black wins!';
+                winnerText.classList.add('winner-text');
+                winnerImageContainer.appendChild(winnerText);
+            } else if (predicted_winner === 'white') {
+                const whiteImage = document.createElement('img');
+                whiteImage.src = 'static/white-king.jpg'; // Path to your white chess piece image
+                whiteImage.alt = 'White Chess Piece';
+                winnerImageContainer.appendChild(whiteImage);
+
+                const winnerText = document.createElement('p');
+                winnerText.textContent = 'White wins!';
+                winnerText.classList.add('winner-text');
+                winnerImageContainer.appendChild(winnerText);
+            } else {
+                const drawText = document.createElement('p');
+                drawText.textContent = 'It\'s a draw!';
+                drawText.classList.add('winner-text');
+                winnerImageContainer.appendChild(drawText);
+            }
+        };
+    </script>
+</body>
+</html>

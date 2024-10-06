@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Winner Prediction</title>
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+<body>
+    <h1>Chess Winner Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="created_at">Created At:</label>
+        <input type="text" id="created_at" name="created_at"><br>
+        <label for="last_move_at">Last Move At:</label>
+        <input type="text" id="last_move_at" name="last_move_at"><br>
+        <label for="turns">Turns:</label>
+        <input type="text" id="turns" name="turns"><br>
+        <label for="victory_status">Victory Status:</label>
+        <input type="text" id="victory_status" name="victory_status"><br>
+        <label for="increment_code">Increment Code:</label>
+        <input type="text" id="increment_code" name="increment_code"><br>
+        <label for="white_rating">White Rating:</label>
+        <input type="text" id="white_rating" name="white_rating"><br>
+        <label for="black_rating">Black Rating:</label>
+        <input type="text" id="black_rating" name="black_rating"><br>
+        <label for="opening_eco">Opening ECO:</label>
+        <input type="text" id="opening_eco" name="opening_eco"><br>
+        <label for="opening_name">Opening Name:</label>
+        <input type="text" id="opening_name" name="opening_name"><br>
+        <label for="opening_ply">Opening Ply:</label>
+        <input type="text" id="opening_ply" name="opening_ply"><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
